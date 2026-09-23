@@ -105,11 +105,7 @@ def FindNearestAgent(package, warehouses, agents):
 #   Author:          Raviraj Aade
 #-----------------------------------------------------------------------------------------------------
 
-def CalculateDeliveryDistance(
-    agentLocation,
-    warehouseLocation,
-    destination
-):
+def CalculateDeliveryDistance( agentLocation, warehouseLocation,   destination):
 
     distanceToWarehouse = CalculateDistance(
         agentLocation,
@@ -183,12 +179,7 @@ def AssignPackages(packages, warehouses, agents):
 #   Author:          Raviraj Aade
 #-----------------------------------------------------------------------------------------------------
 
-def DeliverPackages(
-    packages,
-    warehouses,
-    agents,
-    agentStats
-):
+def DeliverPackages(packages,warehouses,agents,agentStats):
 
     for package in packages:
 
@@ -307,7 +298,6 @@ def main():
     data = LoadData("test_case_10.json")
 
     # Get data from JSON
-
     warehouses = data["warehouses"]
 
     agents = data["agents"]
@@ -316,44 +306,34 @@ def main():
 
 
     # Initialize agent statistics
-
     agentStats = InitializeAgentStats( agents )
 
 
     # Assign packages to nearest agents
-
     AssignPackages( packages, warehouses, agents )
 
 
     # Deliver packages
-
     DeliverPackages(  packages, warehouses, agents, agentStats  )
 
 
     # Generate final report
-
     report = GenerateReport(  agentStats  )
 
 
     # Save report
-
     SaveReport( report, "report.json"  )
 
 
     # Display result
-
     print("FastBox Delivery Report")
-    print("-----------------------")
+    print("--------------------------------------------------------------------------------------")
 
     for agentId in agentStats:
 
-        print(
-            agentId,
-            "->",
-            report[agentId]
-        )
+        print( agentId, "->", report[agentId]   )
 
-    print("-----------------------")
+    print("--------------------------------------------------------------------------------------")
 
     print(
         "Best Agent:",
