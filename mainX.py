@@ -317,43 +317,27 @@ def main():
 
     # Initialize agent statistics
 
-    agentStats = InitializeAgentStats(
-        agents
-    )
+    agentStats = InitializeAgentStats( agents )
 
 
     # Assign packages to nearest agents
 
-    AssignPackages(
-        packages,
-        warehouses,
-        agents
-    )
+    AssignPackages( packages, warehouses, agents )
 
 
     # Deliver packages
 
-    DeliverPackages(
-        packages,
-        warehouses,
-        agents,
-        agentStats
-    )
+    DeliverPackages(  packages, warehouses, agents, agentStats  )
 
 
     # Generate final report
 
-    report = GenerateReport(
-        agentStats
-    )
+    report = GenerateReport(  agentStats  )
 
 
     # Save report
 
-    SaveReport(
-        report,
-        "report.json"
-    )
+    SaveReport( report, "report.json"  )
 
 
     # Display result
