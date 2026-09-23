@@ -1,4 +1,5 @@
 import json
+import math
 
 
 #-----------------------------------------------------------------------------------------------------
@@ -40,4 +41,31 @@ print(data)
 
 
 def CalculateDistance(point1 , point2 ):
+    """
+    Formula:
+        distance = sqrt((x1 - x2)^2 + (y1 - y2)^2)
+
+    Returns:
+        float: The Euclidean distance between point1 and point2.
+    """
+    distance = math.sqrt(
+        (point1["X"] - point2["X"] ) ** 2 
+        + (point1["Y"] - point2["Y"]) ** 2 
+        )
     
+    return distance
+
+#-----------------------------------------------------------------------------------------------------
+#   Function name :  FindNearestAgent
+#   Description :    It Finds the nearest delivery agent to the package warehouse
+#   Parameter :      Package(Dictionary), Warehouses(Dictionary), Agents(Dictionary)
+#   Return :         AgentId(Str)
+#   Date :           23/09/2026
+#   Author:          Raviraj Aade
+#-----------------------------------------------------------------------------------------------------
+def find_nearest_agent(package, warehouses, agents):
+    
+
+
+
+
