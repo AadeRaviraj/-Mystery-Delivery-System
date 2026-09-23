@@ -2,7 +2,7 @@ import json
 
 
 #-----------------------------------------------------------------------------------------------------
-#   Function name :  load_data
+#   Function name :  LoadData
 #   Description :    It Reads and parses the JSON input file
 #   Parameter :      FilePath(Str)
 #   Return :         Data(Dictionary)
@@ -10,7 +10,7 @@ import json
 #   Author:          Raviraj Aade
 #-----------------------------------------------------------------------------------------------------
 
-def load_data(filePath):
+def LoadData(filePath):
     
     try:
         fobj = open(filePath, "r")
@@ -24,9 +24,9 @@ def load_data(filePath):
     
     
 
-# data = load_data("base_case.json")
+data = LoadData("base_case.json")
 
-# print(data)
+print(data)
 
 
 #-----------------------------------------------------------------------------------------------------
@@ -38,3 +38,6 @@ def load_data(filePath):
 #   Author:          Raviraj Aade
 #-----------------------------------------------------------------------------------------------------
 
+
+def CalculateDistance(point1 , point2 ):
+    
